@@ -1,0 +1,12 @@
+{
+  "energies": [
+    {
+      "id": 1,
+      "type": "ELECTRICITY"
+    },
+    {
+      "id": 2,
+      "type": "GAZ"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: ekwateur-billing-app
+
+  sql:
+    init:
+      mode: always
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  #datasource:
+  #  url: jdbc:postgresql://localhost:5432/billing-app
+  #  username: ekwateur
+  #  password: secret
+
+
+pricing:
+  electricity:
+    particular: 0.21
+    professional:
+      gt1M: 0.114
+      lt1M: 0.118
+  gaz:
+    particular: 0.115
+    professional:
+      gt1M: 0.111
+      lt1M: 0.113
