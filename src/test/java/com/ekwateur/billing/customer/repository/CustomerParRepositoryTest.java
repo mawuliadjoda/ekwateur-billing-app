@@ -32,7 +32,7 @@ class CustomerParRepositoryTest {
     @BeforeEach
     void setUp() {
         CustomerPar customerPar = new CustomerPar();
-        customerPar.setReference("EWK12345678");
+        customerPar.setReference("EKW12345678");
         customerPar.setType(CustomerType.PAR);
         customerPar.setCivility(Civility.MONSIEUR);
         customerPar.setLastName("ADJODA");
@@ -50,7 +50,7 @@ class CustomerParRepositoryTest {
     @Test
     void shouldFindCustomerByReference() {
         // Given
-        var reference = "EWK12345678";
+        var reference = "EKW12345678";
 
         // When
         Optional<CustomerPar> customerPar = customerParRepository.findByReference(reference);

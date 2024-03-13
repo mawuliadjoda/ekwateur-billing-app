@@ -77,13 +77,13 @@ class ParticularBillingCalculatorTest {
         gazPricing.setProfessional(professionalGazPricing);
 
         customerPar = new CustomerPar();
-        customerPar.setReference("EWK12345678");
+        customerPar.setReference("EKW12345678");
         customerPar.setType(CustomerType.PAR);
         customerPar.setCivility(Civility.MONSIEUR);
         customerPar.setLastName("ADJODA");
         customerPar.setFirstName("Mawuli");
 
-        customerParDTO = new CustomerParDTO("EWK12345678", CustomerType.PAR, Civility.MONSIEUR, "ADJODA", "Mawuli");
+        customerParDTO = new CustomerParDTO("EKW12345678", CustomerType.PAR, Civility.MONSIEUR, "ADJODA", "Mawuli");
 
 
     }
@@ -92,12 +92,12 @@ class ParticularBillingCalculatorTest {
     void shouldCalculateBillingWhenGivenValidCustomerReference() {
         // Given
         var particularBillingRequestModel = new ParticularBillingRequestModel(
-                "EWK12345678",
+                "EKW12345678",
                 LocalDateTime.now().getYear(),
                 LocalDateTime.now().getMonthValue()
                 // , 100, 100
         );
-        var expectedResponse = new ParticularBillingResponseModel("EWK12345678", 32.5, customerParDTO);
+        var expectedResponse = new ParticularBillingResponseModel("EKW12345678", 32.5, customerParDTO);
 
         given(customerReferenceValidator.test(particularBillingRequestModel.reference())).willReturn(true);
         given(pricingProperties.getElectricity()).willReturn(electricityPricing);
@@ -161,7 +161,7 @@ class ParticularBillingCalculatorTest {
     void shouldNotCalculateBillingWhenGivenNonExistingCustomerReference() {
         // Given
         var particularBillingRequestModel = new ParticularBillingRequestModel(
-                "EWK12345600",
+                "EKW12345600",
                 LocalDateTime.now().getYear(),
                 LocalDateTime.now().getMonthValue()
                 // , 100, 100

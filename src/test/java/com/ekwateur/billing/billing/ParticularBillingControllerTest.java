@@ -35,12 +35,12 @@ class ParticularBillingControllerTest {
     @Test
     void shouldCalculateAmountToBillWhenGivenValidReference() throws Exception {
         var particularBillingRequestModel = new ParticularBillingRequestModel(
-                "EWK12345678",
+                "EKW12345678",
                 LocalDateTime.now().getYear(),
                 LocalDateTime.now().getMonthValue()
                 //, 10, 0
         );
-        var particularBillingResponseModel = new ParticularBillingResponseModel("EWK12345678", 50, null);
+        var particularBillingResponseModel = new ParticularBillingResponseModel("EKW12345678", 50, null);
 
         given(particularBillingCalculator.apply(particularBillingRequestModel)).willReturn(particularBillingResponseModel);
 

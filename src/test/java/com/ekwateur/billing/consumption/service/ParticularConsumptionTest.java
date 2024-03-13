@@ -38,7 +38,7 @@ class ParticularConsumptionTest {
         particularConsumption = new ParticularConsumption(customerParRepository, energyRepository, consumptionRepository );
 
         customerPar = new CustomerPar();
-        customerPar.setReference("EWK12345678");
+        customerPar.setReference("EKW12345678");
         customerPar.setType(CustomerType.PAR);
         customerPar.setCivility(Civility.MONSIEUR);
         customerPar.setLastName("ADJODA");
@@ -49,7 +49,7 @@ class ParticularConsumptionTest {
     void shouldRegisterConsumption() {
         // Given
         ConsumptionRequestModel consumptionRequestModel = new ConsumptionRequestModel(
-                "EWK12345678",
+                "EKW12345678",
                 EnergyType.ELECTRICITY,
                 LocalDateTime.now(),
                 10.0

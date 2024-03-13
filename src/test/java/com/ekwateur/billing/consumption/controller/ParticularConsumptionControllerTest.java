@@ -33,7 +33,7 @@ class ParticularConsumptionControllerTest {
     void shouldRegisterCustomerConsumption() throws Exception {
         // Given
         ConsumptionRequestModel consumptionRequestModel = new ConsumptionRequestModel(
-                "EWK12345678",
+                "EKW12345678",
                 EnergyType.ELECTRICITY,
                 LocalDateTime.now(),
                 10.0

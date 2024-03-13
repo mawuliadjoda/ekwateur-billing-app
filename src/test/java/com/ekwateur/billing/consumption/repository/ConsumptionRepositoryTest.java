@@ -50,7 +50,7 @@ class ConsumptionRepositoryTest {
     void setUp() {
 
         customerPar = new CustomerPar();
-        customerPar.setReference("EWK12345678");
+        customerPar.setReference("EKW12345678");
         customerPar.setType(CustomerType.PAR);
         customerPar.setCivility(Civility.MONSIEUR);
         customerPar.setLastName("ADJODA");
